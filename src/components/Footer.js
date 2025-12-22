@@ -34,7 +34,7 @@ export default function Footer() {
                     </form>
                 </div>
 
-                <div className="quote">
+                <div className="footer-quote">
                     <h2>REQUEST A QUOTE</h2>
                     <p>GET INFORMATION ON PRICING</p>
                     <button>REQUEST A QUOTE »</button>

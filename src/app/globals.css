@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =======================
+   HEADER
+======================= */
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -18,15 +32,317 @@
   font-weight: 600;
 }
 
-.footer-cta {
+
+/* =======================
+   HERO SECTION
+======================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f3a8a;
+  margin: 0;
+}
+
+
+/* =======================
+   HOVER CARD SECTIONS
+======================= */
+
+.hover-card {
+  position: relative;
+  width: 85%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Background image */
+.card-image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Shared overlay styles */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: rgba(15, 42, 63, 0.9);
+  color: white;
+  padding: 40px;
+
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Right overlay */
+.overlay-right {
+  right: 0;
+  transform: translateX(50px);
+}
+
+.hover-card:hover .overlay-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Left overlay */
+.overlay-left {
+  left: 0;
+  transform: translateX(-50px);
+}
+
+.hover-card:hover .overlay-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image zoom */
+.hover-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-overlay h2 {
+  color: #f4b400;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.learn-more {
+  margin-top: 24px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+
+/* =======================
+   INDUSTRIES / PARTNERS SECTION
+======================= */
+
+.industries-partners {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #d4a437;
-  padding: 80px;
+  gap: 80px;
+  padding: 100px 80px;
+  position: relative;
 }
+
+.industries-partners::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  bottom: 80px;
+  width: 1px;
+  background: #ddd;
+}
+
+.industries h2,
+.partners h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f3a8a;
+  margin-bottom: 24px;
+}
+
+.industries p,
+.partners p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.industry-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 16px 32px;
+}
+
+.industry-list li {
+  font-weight: 700;
+  color: #1f3a8a;
+}
+
+.partners-btn {
+  background: #1f3a8a;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.partner-logos img {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+
+/* =======================
+   FOOTER CTA (NEWSLETTER + QUOTE)
+======================= */
+
+.footer-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 100px 80px;
+  color: #0f2a3f;
+
+  background-image: url("https://www.universaloil.com/cmstemplates/universaloil/frontend/content/UO_YellowGearsBG.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Gold overlay */
+.footer-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(212, 164, 55, 0.92);
+  z-index: 0;
+}
+
+/* Vertical divider */
+.footer-cta::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  bottom: 80px;
+  left: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* Content above overlay */
+.footer-cta > * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-cta h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 32px;
+}
+
+.footer-cta label {
+  display: block;
+  font-weight: 700;
+  color: #0f2a3f;
+  margin: 20px 0 8px;
+}
+
+.footer-cta input {
+  width: 100%;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+}
+
+.subscribe-btn {
+  margin-top: 40px;
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer-quote p {
+  font-size: 1.2rem;
+  color: #0f2a3f;
+  margin-bottom: 32px;
+}
+
+.footer-quote .quote-btn {
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =======================
+   FOOTER BOTTOM
+======================= */
 
 .footer-bottom {
   background: #1f3a8a;
   color: white;
   padding: 60px 80px;
+}
+
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 900px) {
+  .hover-card {
+    width: 100%;
+  }
+
+  .industries-partners,
+  .footer-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-partners::before,
+  .footer-cta::after {
+    display: none;
+  }
+
+  .industry-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
