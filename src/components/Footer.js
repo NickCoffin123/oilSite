@@ -30,14 +30,14 @@ export default function Footer() {
                         <label>POSTAL CODE (OPTIONAL):</label>
                         <input type="text" />
 
-                        <button type="submit">SUBSCRIBE</button>
+                        <button className="footer-btn" type="submit">SUBSCRIBE</button>
                     </form>
                 </div>
 
                 <div className="footer-quote">
                     <h2>REQUEST A QUOTE</h2>
                     <p>GET INFORMATION ON PRICING</p>
-                    <button>REQUEST A QUOTE »</button>
+                    <button className="footer-btn">REQUEST A QUOTE »</button>
                 </div>
             </section>
 
@@ -58,7 +58,7 @@ export default function Footer() {
                     />
                 </div>
 
-                <div className="footer-links">
+                <div className="footer-bottom-content">
                     <Link href="/about">About</Link>
                     <Link href="/products">Products</Link>
                     <Link href="/services">Services</Link>
@@ -68,14 +68,14 @@ export default function Footer() {
                     <Link href="/privacy-policy">Privacy Policy</Link>
                 </div>
 
-                <div className="footer-info">
+                <div className="footer-contact">
                     <p>265 Jefferson Avenue</p>
                     <p>Cleveland, OH 44113</p>
                     <p>Phone: 216.771.4300</p>
                     <p>Fax: 216.771.1845</p>
                     <p>© 2025. All Rights Reserved.</p>
 
-                    <div className="socials">
+                    <div className="footer-socials">
                         <a href="#">Facebook</a>
                         <a href="#">Instagram</a>
                         <a href="#">LinkedIn</a>

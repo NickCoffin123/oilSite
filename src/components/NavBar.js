@@ -31,7 +31,7 @@ export default function NavBar() {
                            width={20}
                            height={20}/>
                 </Link>
-                <Link href="/about/page.js">ABOUT</Link>
+                <Link href="/about">ABOUT</Link>
                 <Link href="/products">PRODUCTS</Link>
                 <Link href="/services">SERVICES</Link>
                 <Link href="/sds-spec">SDS/SPEC</Link>
